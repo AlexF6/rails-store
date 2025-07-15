@@ -1,7 +1,26 @@
-<h1>products#index</h1>
-<%= link_to "Create new product", new_product_path %>
-<% @products.each do |product| %>
-<div>
-  <%= link_to "#{product.name}", product%>
+<%# <h1 class="index-title"></h1> %>
+
+<header class="index-header">
+  <div class="container">
+    <div class="title">
+      Elysium
+    </div>
+    <button class="login">
+      Login
+    </button>
+  </div>
+</header>
+
+<div class="index-content">
+  <div class="container">
+
+    <%= link_to "Create new product", new_product_path %>
+    <% @products.each do |product| %>
+    <div>
+      <%= link_to "#{product.name}", product%>
+    </div>
+    <%end%>
+
+  </div>
 </div>
-<%end%>
+
