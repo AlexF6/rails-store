@@ -1,0 +1,13 @@
+<h1>products#show</h1>
+<div>
+  <p><%= @product.name %></p>
+  <p> Description: <%= @product.description %></p>
+  <p> Price:  <%= @product.price %></p>
+  <p> Stock: <%= @product.stock %></p>
+</div>
+
+<div>
+  <p><%= link_to "Back", products_path %></p>
+  <p><%= link_to "Edit", edit_product_path(@product) %></p>
+  <p><%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %></p>
+</div>
